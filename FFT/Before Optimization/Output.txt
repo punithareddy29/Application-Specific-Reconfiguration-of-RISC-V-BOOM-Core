@@ -1,0 +1,88 @@
+vinodh/rocket/chipyard-clean/sims/verilator -L/home/vinodh/rocket/chipyard-clean/tools/DRAMSim2 -lfesvr -ldramsim  -pthread -lpthread -latomic -o /home/vinodh/rocket/chipyard-clean/sims/verilator/simulator-chipyard-SmallBoomConfig  
+make[1]: Leaving directory '/home/vinodh/rocket/chipyard-clean/sims/verilator/generated-src/chipyard.TestHarness.SmallBoomConfig/chipyard.TestHarness.SmallBoomConfig'
+(set -o pipefail &&  /home/vinodh/rocket/chipyard-clean/sims/verilator/simulator-chipyard-SmallBoomConfig +permissive +dramsim +dramsim_ini_dir=/home/vinodh/rocket/chipyard-clean/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=15000000   +verbose +permissive-off /home/vinodh/rocket/fft_project/fft_16.riscv </dev/null 2> >(spike-dasm > /home/vinodh/rocket/chipyard-clean/sims/verilator/output/chipyard.TestHarness.SmallBoomConfig/fft_16.out) | tee /home/vinodh/rocket/chipyard-clean/sims/verilator/output/chipyard.TestHarness.SmallBoomConfig/fft_16.log)
+[UART] UART0 is here (stdin/stdout).
+Generating FFT input of size 16
+Computing the FFT...
+            cycles : 13374
+           instret : 9042
+             loads : 0
+            stores : 0
+           I$ miss : 33
+   D$ regular miss : 15
+  D$ prefetch miss : 0
+        D$ release : 0
+         ITLB miss : 0
+         DTLB miss : 0
+       L2 TLB miss : 0
+          branches : 0
+       mispredicts : 0
+load-use interlock : 0
+        I$ blocked : 0
+        D$ blocked : 0
+vinodh@godel:~/rocket/chipyard-clean/sims/verilator$ make CONFIG=SmallBoomConfig run-binary BINARY=~/rocket/fft_project/fft_32.riscv
+Running with RISCV=/home/vinodh/rocket/chipyard-clean/riscv-tools-install
+(set -o pipefail &&  /home/vinodh/rocket/chipyard-clean/sims/verilator/simulator-chipyard-SmallBoomConfig +permissive +dramsim +dramsim_ini_dir=/home/vinodh/rocket/chipyard-clean/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=15000000   +verbose +permissive-off /home/vinodh/rocket/fft_project/fft_32.riscv </dev/null 2> >(spike-dasm > /home/vinodh/rocket/chipyard-clean/sims/verilator/output/chipyard.TestHarness.SmallBoomConfig/fft_32.out) | tee /home/vinodh/rocket/chipyard-clean/sims/verilator/output/chipyard.TestHarness.SmallBoomConfig/fft_32.log)
+[UART] UART0 is here (stdin/stdout).
+Generating FFT input of size 32
+Computing the FFT...
+            cycles : 30151
+           instret : 21729
+             loads : 0
+            stores : 0
+           I$ miss : 33
+   D$ regular miss : 24
+  D$ prefetch miss : 0
+        D$ release : 1
+         ITLB miss : 0
+         DTLB miss : 0
+       L2 TLB miss : 0
+          branches : 0
+       mispredicts : 0
+load-use interlock : 0
+        I$ blocked : 0
+        D$ blocked : 0
+vinodh@godel:~/rocket/chipyard-clean/sims/verilator$ make CONFIG=SmallBoomConfig run-binary BINARY=~/rocket/fft_project/fft_64.riscv
+Running with RISCV=/home/vinodh/rocket/chipyard-clean/riscv-tools-install
+(set -o pipefail &&  /home/vinodh/rocket/chipyard-clean/sims/verilator/simulator-chipyard-SmallBoomConfig +permissive +dramsim +dramsim_ini_dir=/home/vinodh/rocket/chipyard-clean/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=15000000   +verbose +permissive-off /home/vinodh/rocket/fft_project/fft_64.riscv </dev/null 2> >(spike-dasm > /home/vinodh/rocket/chipyard-clean/sims/verilator/output/chipyard.TestHarness.SmallBoomConfig/fft_64.out) | tee /home/vinodh/rocket/chipyard-clean/sims/verilator/output/chipyard.TestHarness.SmallBoomConfig/fft_64.log)
+[UART] UART0 is here (stdin/stdout).
+Generating FFT input of size 64
+Computing the FFT...
+            cycles : 68174
+           instret : 50832
+             loads : 0
+            stores : 0
+           I$ miss : 33
+   D$ regular miss : 45
+  D$ prefetch miss : 0
+        D$ release : 10
+         ITLB miss : 0
+         DTLB miss : 0
+       L2 TLB miss : 0
+          branches : 0
+       mispredicts : 0
+load-use interlock : 0
+        I$ blocked : 0
+        D$ blocked : 0
+vinodh@godel:~/rocket/chipyard-clean/sims/verilator$ make CONFIG=SmallBoomConfig run-binary BINARY=~/rocket/fft_project/fft_128.riscv
+Running with RISCV=/home/vinodh/rocket/chipyard-clean/riscv-tools-install
+(set -o pipefail &&  /home/vinodh/rocket/chipyard-clean/sims/verilator/simulator-chipyard-SmallBoomConfig +permissive +dramsim +dramsim_ini_dir=/home/vinodh/rocket/chipyard-clean/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=15000000   +verbose +permissive-off /home/vinodh/rocket/fft_project/fft_128.riscv </dev/null 2> >(spike-dasm > /home/vinodh/rocket/chipyard-clean/sims/verilator/output/chipyard.TestHarness.SmallBoomConfig/fft_128.out) | tee /home/vinodh/rocket/chipyard-clean/sims/verilator/output/chipyard.TestHarness.SmallBoomConfig/fft_128.log)
+[UART] UART0 is here (stdin/stdout).
+Generating FFT input of size 128
+Computing the FFT...
+            cycles : 155810
+           instret : 116583
+             loads : 0
+            stores : 0
+           I$ miss : 33
+   D$ regular miss : 111
+  D$ prefetch miss : 0
+        D$ release : 46
+         ITLB miss : 0
+         DTLB miss : 0
+       L2 TLB miss : 0
+          branches : 0
+       mispredicts : 0
+load-use interlock : 0
+        I$ blocked : 0
+        D$ blocked : 0

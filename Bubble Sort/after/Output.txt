@@ -1,0 +1,16 @@
+            cycles : 971722
+           instret : 752482
+             loads : 0
+            stores : 0
+           I$ miss : 7
+   D$ regular miss : 11
+  D$ prefetch miss : 0
+        D$ release : 11
+         ITLB miss : 0
+         DTLB miss : 0
+       L2 TLB miss : 0
+          branches : 0
+       mispredicts : 0
+load-use interlock : 0
+        I$ blocked : 0
+        D$ blocked : 0

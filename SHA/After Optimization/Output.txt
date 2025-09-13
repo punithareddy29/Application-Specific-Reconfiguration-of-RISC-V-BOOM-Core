@@ -1,0 +1,21 @@
+vinodh@godel:~/rocket/chipyard-clean/sims/verilator$ make CONFIG=SmallBoomConfig run-binary BINARY=~/rocket/sha_project/sha.riscv
+Running with RISCV=/home/vinodh/rocket/chipyard-clean/riscv-tools-install
+(set -o pipefail &&  /home/vinodh/rocket/chipyard-clean/sims/verilator/simulator-chipyard-SmallBoomConfig +permissive +dramsim +dramsim_ini_dir=/home/vinodh/rocket/chipyard-clean/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=15000000   +verbose +permissive-off /home/vinodh/rocket/sha_project/sha.riscv </dev/null 2> >(spike-dasm > /home/vinodh/rocket/chipyard-clean/sims/verilator/output/chipyard.TestHarness.SmallBoomConfig/sha.out) | tee /home/vinodh/rocket/chipyard-clean/sims/verilator/output/chipyard.TestHarness.SmallBoomConfig/sha.log)
+[UART] UART0 is here (stdin/stdout).
+SHA-256 hash: c2f5668e2041ea2119945145a8a7daeb4129245bebdb46d2bd01e0f46e549eb5
+            cycles : 41041
+           instret : 30838
+             loads : 0
+            stores : 0
+           I$ miss : 100
+   D$ regular miss : 46
+  D$ prefetch miss : 0
+        D$ release : 17
+         ITLB miss : 0
+         DTLB miss : 0
+       L2 TLB miss : 0
+          branches : 0
+       mispredicts : 0
+load-use interlock : 0
+        I$ blocked : 0
+        D$ blocked : 0
